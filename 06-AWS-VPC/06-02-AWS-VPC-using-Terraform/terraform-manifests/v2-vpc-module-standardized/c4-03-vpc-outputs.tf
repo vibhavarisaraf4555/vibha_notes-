@@ -35,3 +35,9 @@ output "azs" {
   description = "A list of availability zones spefified as argument to this module"
   value       = module.vpc.azs
 }
+
+# NAtgateway id
+output "natgateway_id" {
+  description = "It will give nat gateway id"
+  value       = module.vpc.natgw_ids
+}
