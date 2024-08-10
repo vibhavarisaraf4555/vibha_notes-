@@ -6,11 +6,12 @@ module "vpc" {
   version = "5.4.0"  
 
   # VPC Basic Details
-  name = "${local.name}-${var.vpc_name}"
-  cidr = var.vpc_cidr_block
+  name            = "${local.name}-${var.vpc_name}"
+  cidr            = var.vpc_cidr_block
   azs             = var.vpc_availability_zones
   public_subnets  = var.vpc_public_subnets
   private_subnets = var.vpc_private_subnets  
+  map_public_ip_on_launch = true
 
   # Database Subnets
   # database_subnets = var.vpc_database_subnets
